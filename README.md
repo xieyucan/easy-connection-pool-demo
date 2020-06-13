@@ -8,7 +8,7 @@ EasyConnectionPoolDemo项目中分别演示了使用常见Jpa、JdbcTemplate、M
 说明演示，也就有这个项目了。项目中分别使用了两个数据、两个表演示，理论上项目中添加了支持JDBC协议驱动的数据源配置即可实现数据源动态切换逻辑。
 该连接池项目还有一个特点就是在启动阶段会打印详细的连接信息以及连接表信息，如下图所示：
 
-![启动图片](https://github.com/xieyucan/easy-connection-pool-demo/images/start.jpeg)
+![启动图片](https://github.com/xieyucan/easy-connection-pool-demo/blob/master/images/start.jpeg)
 
 
 ### 准备
