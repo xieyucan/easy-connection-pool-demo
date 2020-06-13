@@ -6,6 +6,10 @@ EasyConnectionPoolDemo项目中分别演示了使用常见Jpa、JdbcTemplate、M
 
 按理说spring-boot-easy-connection-pool处理的是DataSource，对各种持久层框架而言是透明的，使用场景也是很类似、简单。但是为了给出更明白的
 说明演示，也就有这个项目了。项目中分别使用了两个数据、两个表演示，理论上项目中添加了支持JDBC协议驱动的数据源配置即可实现数据源动态切换逻辑。
+该连接池项目还有一个特点就是在启动阶段会打印详细的连接信息以及连接表信息，如下图所示：
+
+![启动图片](https://github.com/xieyucan/easy-connection-pool-demo/images/start.jpeg)
+
 
 ### 准备
 该项目演示使用的是MySql数据库，所以运行项目的前提是要有MySql数据库。新建数据库及表
