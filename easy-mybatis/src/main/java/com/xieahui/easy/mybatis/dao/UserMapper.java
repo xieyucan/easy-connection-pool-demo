@@ -12,7 +12,7 @@ import java.util.List;
  * Created by xiehui1956(@)gmail.com on 2020/6/13
  */
 @Mapper
-public interface UserDao {
+public interface UserMapper {
 
     @Select("select id, name, sex from user")
     List<Db1UserEntity> findAll();

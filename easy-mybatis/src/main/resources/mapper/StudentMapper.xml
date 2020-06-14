@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.xieahui.easy.mybatis.dao.StudentMapper">
+
+    <resultMap id="BaseResultMap" type="com.xieahui.easy.mybatis.entity.EasyPoolDemoStudentEntity">
+        <id column="id" jdbcType="BIGINT" property="id"/>
+        <result column="name" jdbcType="VARCHAR" property="name"/>
+        <result column="sex" jdbcType="VARCHAR" property="sex"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        id, `name`, sex
+    </sql>
+
+    <select id="findAll" resultMap="BaseResultMap">
+        select
+        <include refid="Base_Column_List"/>
+        from student
+    </select>
+
+    <insert id="save" keyColumn="id" keyProperty="id"
+            parameterType="com.xieahui.easy.mybatis.entity.EasyPoolDemoStudentEntity" useGeneratedKeys="true">
+        insert into student (`name`, sex)
+        values (#{name,jdbcType=VARCHAR}, #{sex,jdbcType=VARCHAR})
+    </insert>
+
+</mapper>

@@ -1,6 +1,6 @@
 package com.xieahui.easy.mybatis.service;
 
-import com.xieahui.easy.mybatis.dao.UserDao;
+import com.xieahui.easy.mybatis.dao.UserMapper;
 import com.xieahui.easy.mybatis.entity.Db1UserEntity;
 import com.xieahui.springboot.annotation.TargetDataSource;
 import org.springframework.stereotype.Service;
@@ -15,7 +15,7 @@ import java.util.List;
 public class UserService {
 
     @Resource
-    private UserDao userDao;
+    private UserMapper userMapper;
 
     /**
      * 指定连接池
@@ -24,7 +24,7 @@ public class UserService {
      */
     @TargetDataSource("db1")
     public List<Db1UserEntity> findAll() {
-        return userDao.findAll();
+        return userMapper.findAll();
     }
 
     /**
@@ -35,6 +35,6 @@ public class UserService {
      */
     @TargetDataSource("db1")
     public int save(Db1UserEntity entity) {
-        return userDao.save(entity);
+        return userMapper.save(entity);
     }
 }
