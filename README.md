@@ -10,6 +10,13 @@ EasyConnectionPoolDemo项目中分别演示了使用常见Jpa、JdbcTemplate、M
 
 ![启动图片](https://github.com/xieyucan/easy-connection-pool-demo/blob/master/images/start.jpeg)
 
+### V1.0.1 - 更新说明
+新增从默认数据库中获取数据源连接信息，使用说明。
+
+#### 1. 实例地址
+```javascript
+https://github.com/xieyucan/easy-connection-pool-demo/blob/master/easy-jdbctemplate/src/main/java/com/xieahui/easy/jdbctemplate/service/MyDb3Service.java
+```
 
 ### 准备
 该项目演示使用的是MySql数据库，所以运行项目的前提是要有MySql数据库。新建数据库及表
