@@ -1,4 +1,6 @@
 ## EasyConnectionPoolDemo动态连接池实例
+求star、求指教。
+
 ### 简介
 EasyConnectionPoolDemo是SpringBoot动态配置多数据源连接池[spring-boot-easy-connection-pool](https://github.com/xieyucan/spring-boot-easy-connection-pool "spring-boot-easy-connection-pool")项目的实例。
 
