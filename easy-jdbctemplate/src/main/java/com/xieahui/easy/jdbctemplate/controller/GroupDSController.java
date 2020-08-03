@@ -10,7 +10,7 @@ import javax.annotation.Resource;
 import java.util.List;
 
 /**
- * 分组数据源实例
+ * 分组数据源演示-实例
  * Created by xiehui1956(@)gmail.com on 2020/8/3
  */
 @RestController
@@ -21,7 +21,7 @@ public class GroupDSController {
     private GroupDSService groupDSService;
 
     @GetMapping("/findAll")
-    public List<MyDb3> findAll() {
-        return groupDSService.findAll();
+    public List<MyDb3> findAll(int id) {
+        return groupDSService.findAll(id);
     }
 }

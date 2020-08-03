@@ -1,6 +1,7 @@
 package com.xieahui.easy.jdbctemplate.dao;
 
 import com.xieahui.easy.jdbctemplate.entity.MyDb3;
+import com.xieahui.springboot.annotation.TargetDataSource;
 import org.springframework.jdbc.core.BeanPropertyRowMapper;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Repository;
@@ -17,6 +18,7 @@ public class GroupDSDao {
     @Resource
     private JdbcTemplate jdbcTemplate;
 
+    @TargetDataSource
     public List<MyDb3> findAll() {
         return jdbcTemplate.query("select id, db_name as name from my_db3"
                 , new BeanPropertyRowMapper().newInstance(MyDb3.class));

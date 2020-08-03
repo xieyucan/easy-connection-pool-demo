@@ -1,8 +1,10 @@
 package com.xieahui.easy.jdbctemplate.service;
 
 import com.xieahui.easy.jdbctemplate.dao.GroupDSDao;
+import com.xieahui.easy.jdbctemplate.dao.MyDb3Dao;
+import com.xieahui.easy.jdbctemplate.entity.DbEntity;
 import com.xieahui.easy.jdbctemplate.entity.MyDb3;
-import com.xieahui.springboot.annotation.TargetDataSource;
+import com.xieahui.springboot.config.DynamicDbSource;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
@@ -17,8 +19,14 @@ public class GroupDSService {
     @Resource
     private GroupDSDao groupDSDao;
 
-    @TargetDataSource(groupName = "db_group")
-    public List<MyDb3> findAll() {
+    @Resource
+    private MyDb3Dao myDb3Dao;
+
+    public List<MyDb3> findAll(int id) {
+        DbEntity dbEntity = myDb3Dao.findById(id);
+        //设置连接池名称
+        DynamicDbSource.setGroupName(dbEntity.getGroupName());
+
         return groupDSDao.findAll();
     }
 }

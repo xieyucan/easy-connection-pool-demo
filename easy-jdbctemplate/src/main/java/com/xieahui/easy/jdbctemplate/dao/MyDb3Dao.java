@@ -26,7 +26,6 @@ public class MyDb3Dao {
                         "jdbc_url as jdbcUrl, " +
                         "pool_name as poolName, " +
                         "group_name as groupName, " +
-                        "group_id as groupId, " +
                         "balance_type as balanceType, " +
                         "username as username, " +
                         "password as password, " +
