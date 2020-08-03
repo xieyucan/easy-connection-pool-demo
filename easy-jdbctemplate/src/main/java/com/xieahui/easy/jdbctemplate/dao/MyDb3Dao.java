@@ -1,8 +1,8 @@
 package com.xieahui.easy.jdbctemplate.dao;
 
+import com.xieahui.easy.jdbctemplate.entity.DbEntity;
 import com.xieahui.easy.jdbctemplate.entity.MyDb3;
 import com.xieahui.springboot.annotation.TargetDataSource;
-import com.xieahui.springboot.entity.DbEntity;
 import org.springframework.jdbc.core.BeanPropertyRowMapper;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Repository;
@@ -25,6 +25,9 @@ public class MyDb3Dao {
                         "driver_class_name as driverClassName, " +
                         "jdbc_url as jdbcUrl, " +
                         "pool_name as poolName, " +
+                        "group_name as groupName, " +
+                        "group_id as groupId, " +
+                        "balance_type as balanceType, " +
                         "username as username, " +
                         "password as password, " +
                         "minimum_idle as minimumIdle, " +
