@@ -18,8 +18,13 @@ public class GroupDSDao {
     @Resource
     private JdbcTemplate jdbcTemplate;
 
-    @TargetDataSource
     public List<MyDb3> findAll() {
+        return jdbcTemplate.query("select id, db_name as name from my_db3"
+                , new BeanPropertyRowMapper().newInstance(MyDb3.class));
+    }
+
+    @TargetDataSource
+    public List<MyDb3> findById() {
         return jdbcTemplate.query("select id, db_name as name from my_db3"
                 , new BeanPropertyRowMapper().newInstance(MyDb3.class));
     }

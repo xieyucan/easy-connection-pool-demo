@@ -20,8 +20,24 @@ public class GroupDSController {
     @Resource
     private GroupDSService groupDSService;
 
+    /**
+     * 注解指定
+     *
+     * @return
+     */
     @GetMapping("/findAll")
-    public List<MyDb3> findAll(int id) {
-        return groupDSService.findAll(id);
+    public List<MyDb3> findAll() {
+        return groupDSService.findAll();
+    }
+
+    /**
+     * 业务指定
+     *
+     * @param id
+     * @return
+     */
+    @GetMapping("/findById")
+    public List<MyDb3> findById(int id) {
+        return groupDSService.findById(id);
     }
 }
