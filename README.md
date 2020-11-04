@@ -12,6 +12,10 @@ EasyConnectionPoolDemo项目中分别演示了使用常见Jpa、JdbcTemplate、M
 
 ![启动图片](https://github.com/xieyucan/easy-connection-pool-demo/blob/master/images/start.jpeg)
 
+### V1.0.2 - 更新说明
+1. jdbcTemplate项目更新连接池版本，增加动态加载数据库中配置的链接信息构建连接池的demo;
+2. 添加数据看配置信息表SQL。
+
 ### V1.0.1 - 更新说明
 新增从默认数据库中获取数据源连接信息，使用说明。
 
